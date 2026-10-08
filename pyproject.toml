@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "python-job-listings-scraper"
+version = "1.0.0"
+description = "A web scraper that collects job listings from the Fake Python Jobs website."
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+]
+
+
+[project.scripts]
+job-scraper = "python_job_listings_scraper.main:main"
+
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
