@@ -15,6 +15,8 @@ def main() -> None:
     except ValueError as e:
         print(e)
 
+    print("Job listings successfully saved to CSV")
+
 
 if __name__ == "__main__":
     main()
